@@ -4,11 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 class Bai3Test {
 
     @Test
