@@ -8,9 +8,9 @@ class Bai2Test {
 
     @Test
     void sum() {
-        final var rs = new Bai2();
+        final var result = new Bai2();
 
-        assertEquals(6, rs.sum(15));
-        assertEquals(2, rs.sum(20));
+        assertEquals(6, result.sumDigits(15));
+        assertEquals(2, result.sumDigits(20));
     }
 }
