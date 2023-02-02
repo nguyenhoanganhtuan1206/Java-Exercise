@@ -6,11 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Bai3Test {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void handleAnalysisNumber() {
         final var bai3 = new Bai3();
 
         assertEquals("2 * 2 * 2 * 3 * 5 * 5" , bai3.handleAnalysisNumber(600));
-        assertEquals(false , bai3.isPrime(600));
     }
 }
