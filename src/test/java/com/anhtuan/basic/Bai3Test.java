@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 class Bai3Test {
 
     @Test
@@ -25,6 +28,6 @@ class Bai3Test {
         int []input = new int[]{22, 123, 45, 67, 89, 21, 56, 23};
         int []result = new int[]{21, 22, 23, 123, 45, 56, 67, 89};
 
-        assertEquals(result , bai3.handleSortArray(input));
+        assertArrayEquals(result , bai3.handleSortArray(input));
     }
 }
