@@ -4,39 +4,40 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Bai3 {
-    public static boolean isPrime(int n) {
-        if (n < 2) {
+
+    public static boolean isPrime(int number) {
+        if (number < 2) {
             return false;
         }
 
-        for (int i = 2; i < Math.sqrt(n); i++) {
-            if (n % i == 0) {
+        for (int i = 2; i < Math.sqrt(number); i++) {
+            if (number % i == 0) {
                 return false;
             }
         }
         return true;
     }
 
-    public static String handleAnalysisNumber(int n) {
-        final StringBuilder str = new StringBuilder();
+    public static String handleAnalysisNumber(int number) {
+        final StringBuilder resultStr = new StringBuilder();
         final List<Number> list = new LinkedList<>();
 
-        int number = n;
+        int numberTemp = number;
 
-        for (int i = 0; i < number; i++) {
-            while (isPrime(i) && number % i == 0) {
-                number /= i;
+        for (int i = 0; i < numberTemp; i++) {
+            while (isPrime(i) && numberTemp % i == 0) {
+                numberTemp /= i;
                 list.add(i);
             }
         }
 
         int size = list.size();
         for (int i = 0; i < size - 1; i++) {
-            str.append(list.get(i) + " * ");
+            resultStr.append(list.get(i) + " * ");
         }
 
-        str.append(list.get(size - 1));
+        resultStr.append(list.get(size - 1));
 
-        return str.toString();
+        return resultStr.toString();
     }
 }
