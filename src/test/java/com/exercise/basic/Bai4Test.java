@@ -12,5 +12,6 @@ class Bai4Test {
 
         assertEquals(20, bai4.sumFibonacci(9));
         assertEquals(433494436, bai4.sumFibonacci(222222222));
+        assertEquals(0, bai4.sumFibonacci(-1));
     }
 }
