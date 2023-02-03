@@ -8,6 +8,7 @@ public class Bai6 {
 
         while (first <= last) {
             final int mid = (first + last) / 2;
+
             if (arr[mid] == value) {
                 return mid;
             }
