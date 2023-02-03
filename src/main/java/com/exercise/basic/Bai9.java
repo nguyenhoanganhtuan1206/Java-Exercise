@@ -7,7 +7,7 @@ public class Bai9 {
             return false;
         }
 
-        for (int i = 2; i <= (int) Math.sqrt(number); i++) {
+        for (int i = 2; i * i <= (int) number; i++) {
             if (number % i == 0) {
                 return false;
             }
