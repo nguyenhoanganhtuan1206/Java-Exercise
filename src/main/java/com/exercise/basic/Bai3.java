@@ -1,4 +1,4 @@
-package com.anhtuan.exercise;
+package com.exercise.basic;
 
 public class Bai3 {
 
