@@ -8,6 +8,10 @@ class Bai9Test {
 
     @Test
     void testIsPrime() {
+        final var bai9 = new Bai9();
+
+        assertEquals(false, bai9.isPrime(8));
+        assertEquals(false, bai9.isPrime(-1));
     }
 
     @Test
