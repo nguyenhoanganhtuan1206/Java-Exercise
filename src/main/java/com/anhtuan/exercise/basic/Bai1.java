@@ -1,8 +1,9 @@
 package com.anhtuan.exercise.basic;
 
 public class Bai1 {
+
     public static double xuLyUocChungLonNhat(final int a, final int b) {
-        if(a == 0 || b == 0) {
+        if (a == 0 || b == 0) {
             return a + b;
         }
 
@@ -10,7 +11,7 @@ public class Bai1 {
         int numberB = b;
 
         while (numberA != numberB) {
-            if(numberA > numberB) {
+            if (numberA > numberB) {
                 numberA -= numberB;
             } else {
                 numberB -= numberA;
