@@ -2,7 +2,7 @@ package com.exercise.basic;
 
 public class Bai9 {
 
-    public String handleFormatStr(String str) {
+    public String handleFormatStr(final String str) {
         if (str.length() <= 1) {
             return str.toUpperCase();
         }
