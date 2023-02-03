@@ -1,4 +1,4 @@
-package com.anhtuan.basic;
+package com.exercise.basic;
 
 import org.junit.jupiter.api.Test;
 
