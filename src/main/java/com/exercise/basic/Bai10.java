@@ -2,7 +2,7 @@ package com.exercise.basic;
 
 public class Bai10 {
 
-    public int[] reverseArray(int arr[]) {
+    public int[] reverseArray(final int arr[]) {
         final int newArr[] = new int[arr.length];
         int lenNewArr = 0;
 
