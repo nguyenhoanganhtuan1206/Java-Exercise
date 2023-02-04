@@ -1,4 +1,4 @@
-package com.anhtuan.exercise.basic;
+package com.exercise.basic.SoHoc;
 
 public class Bai1 {
 

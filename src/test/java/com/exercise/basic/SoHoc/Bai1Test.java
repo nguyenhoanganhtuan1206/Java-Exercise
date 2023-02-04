@@ -1,8 +1,8 @@
-package com.anhtuan.exercise.basic;
+package com.exercise.basic.SoHoc;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Bai1Test {
 
