@@ -10,8 +10,8 @@ class Bai9Test {
     void handleFormatStr() {
         final var bai9 = new Bai9();
 
-        assertEquals("Anh tuan", bai9.handleFormatStr("aNh TuAN"));
-        assertEquals("Nguyen hoang anh tuan", bai9.handleFormatStr("nguyen HOANG aNh TuAN"));
+        assertEquals("Anh Tuan", bai9.handleFormatStr("aNh TuAN"));
+        assertEquals("Nguyen Hoang Anh Tuan", bai9.handleFormatStr("nguyen HOANG aNh TuAN"));
         assertEquals("", bai9.handleFormatStr(""));
     }
 }
