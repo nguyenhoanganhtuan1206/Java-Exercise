@@ -1,27 +1,25 @@
 package com.exercise.basic;
 
-import java.util.Stack;
-
 public class Bai10 {
 
     public String handleFormatCode(final String str) {
         /* Có thể sử dụng replace all "//s+" */
-
         final StringBuilder strResult = new StringBuilder();
-        final Stack<Character> stack = new Stack<>();
+        int count = 0;
 
-        for (char ch : str.trim().toCharArray()) {
-            if (ch == ' ' && !stack.isEmpty() && stack.peek() != ' ') {
-                stack.push(' ');
-            } else if (ch != ' ') {
-                stack.push(ch);
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ') {
+                count++;
+            } else {
+                count = 0;
+            }
+
+            if (count < 2) {
+                // nhiều hơn 1 khoảng trắng
+                strResult.append(i);
             }
         }
 
-        while (!stack.isEmpty()) {
-            strResult.append(stack.pop());
-        }
-
-        return strResult.reverse().toString();
+        return strResult.toString().trim();
     }
 }
