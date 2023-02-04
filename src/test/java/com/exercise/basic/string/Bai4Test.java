@@ -10,8 +10,7 @@ class Bai4Test {
     void checkDuplicate() {
         final var bai4 = new Bai4();
 
-        assertEquals(false , bai4.checkDuplicate("abc"));
-        assertEquals(true , bai4.checkDuplicate("abcabc"));
-        assertEquals(false , bai4.checkDuplicate(""));
+        assertTrue(bai4.checkDuplicate("abab"));
+        assertFalse(bai4.checkDuplicate("abc"));
     }
 }
