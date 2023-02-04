@@ -1,13 +1,12 @@
-package com.exercise.basic;
+package com.exercise.basic.array;
 
 public class Bai10 {
 
     public int[] reverseArray(final int arr[]) {
         final int newArr[] = new int[arr.length];
-        int lenNewArr = 0;
 
         for (int i = arr.length - 1; i >= 0; i--) {
-            newArr[lenNewArr++] = arr[i];
+            newArr[newArr.length - i - 1] = arr[i];
         }
 
         return newArr;
