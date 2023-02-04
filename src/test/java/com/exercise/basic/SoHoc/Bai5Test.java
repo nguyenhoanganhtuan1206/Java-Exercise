@@ -1,13 +1,13 @@
-package com.exercise.basic;
+package com.exercise.basic.SoHoc;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Bai5Test {
 
     @Test
-    void testFindSum() {
+    void findSum() {
         final var bai5 = new Bai5();
 
         assertEquals(70, bai5.findSum(5));
