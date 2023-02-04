@@ -1,4 +1,4 @@
-package com.exercise.basic;
+package com.exercise.basic.array;
 
 public class Bai8 {
 
@@ -6,7 +6,7 @@ public class Bai8 {
         int sumResult = 0;
 
         for (int i = 0; i < arr.length; i++) {
-            sumResult += Math.pow(arr[i], 2);
+            sumResult += arr[i] * arr[i];
         }
 
         return sumResult;
