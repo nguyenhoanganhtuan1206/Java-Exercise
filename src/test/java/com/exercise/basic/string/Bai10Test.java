@@ -1,5 +1,6 @@
-package com.exercise.basic;
+package com.exercise.basic.string;
 
+import com.exercise.basic.string.Bai10;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

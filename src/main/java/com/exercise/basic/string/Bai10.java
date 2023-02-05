@@ -1,4 +1,4 @@
-package com.exercise.basic;
+package com.exercise.basic.string;
 
 public class Bai10 {
 
@@ -16,7 +16,7 @@ public class Bai10 {
 
             if (count < 2) {
                 // nhiều hơn 1 khoảng trắng
-                strResult.append(i);
+                strResult.append(str.charAt(i));
             }
         }
 
