@@ -15,6 +15,10 @@ public class Bai8 {
                 // Check other characters
                 return false;
             }
+
+            if(countLen < 0) {
+                return false;
+            }
         }
 
         if (countLen == 0) {
