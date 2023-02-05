@@ -2,7 +2,7 @@ package com.exercise.basic.string;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class Bai7Test {
 
@@ -10,10 +10,13 @@ class Bai7Test {
     void findSubstring() {
         final var bai7 = new Bai7();
 
-        assertEquals(true, bai7.findSubstring("anh tuan", "tu"));
-        assertEquals(true, bai7.findSubstring("anh tuan", "anh"));
-        assertEquals(false, bai7.findSubstring("anh tuan", "asdasd"));
-        assertEquals(false, bai7.findSubstring("anh tuan", " "));
-        assertEquals(false, bai7.findSubstring("anh tuan", ""));
+        assertTrue(bai7.findSubstring("anh tuan", "tu"));
+        assertTrue(bai7.findSubstring("anh tuan", "anh"));
+
+        assertFalse(bai7.findSubstring("anh tuan", "asdasd"));
+        assertFalse(bai7.findSubstring("asdasd", "anh tuan"));
+        assertFalse(bai7.findSubstring("anh tuan", " "));
+        assertFalse(bai7.findSubstring("anh tuan", ""));
+        assertFalse(bai7.findSubstring("", "anh tuan"));
     }
 }
