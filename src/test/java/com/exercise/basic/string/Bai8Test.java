@@ -15,6 +15,7 @@ class Bai8Test {
         assertFalse(bai8.handleCheckStr("(,)"));
         assertFalse(bai8.handleCheckStr(")"));
         assertFalse(bai8.handleCheckStr("("));
+        assertFalse(bai8.handleCheckStr(")("));
 
         assertTrue(bai8.handleCheckStr("(((())))()()"));
         assertTrue(bai8.handleCheckStr("()()()"));
