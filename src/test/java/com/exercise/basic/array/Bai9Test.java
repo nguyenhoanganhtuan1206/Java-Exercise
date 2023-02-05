@@ -1,4 +1,4 @@
-package com.exercise.basic;
+package com.exercise.basic.array;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package com.exercise.basic;
+package com.exercise.basic.array;
 
 public class Bai9 {
 
@@ -7,7 +7,7 @@ public class Bai9 {
             return false;
         }
 
-        for (int i = 2; i * i <= (int) number; i++) {
+        for (int i = 2; i * i <= number; i++) {
             if (number % i == 0) {
                 return false;
             }
@@ -16,7 +16,7 @@ public class Bai9 {
         return true;
     }
 
-    public int countNumbersPrime(final int arr[]) {
+    public int countNumbersPrime(final int[] arr) {
         int count = 0;
 
         for (int i = 0; i < arr.length; i++) {
