@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f639739-915f-4d66-a2d6-77495b4d9a7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/anhtuan/basic/Bai1.java" beforeDir="false" />
-    </list>
+    <list default="true" id="1f639739-915f-4d66-a2d6-77495b4d9a7e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +35,7 @@
       <list>
         <option value="package-info" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -55,8 +53,11 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,10 +65,18 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.anhtuan.exercise.basic" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.Bai1Test.testXuLyUocChungLonNhat">
     <configuration name="Bai1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="exercise.anhtuan.basic.Bai1" />
       <module name="JavaExercise.main" />
@@ -81,8 +90,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Bai1Test.testXuLyBoiChungNhoNhat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.anhtuan.exercise.basic.Bai1Test.testXuLyBoiChungNhoNhat&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Bai1Test.testXuLyUocChungLonNhat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.anhtuan.exercise.basic.Bai1Test.testXuLyUocChungLonNhat&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Bai1Test.testXuLyUocChungLonNhat" />
+        <item itemvalue="Gradle.Bai1Test.testXuLyBoiChungNhoNhat" />
         <item itemvalue="Application.Bai1" />
       </list>
     </recent_temporary>
@@ -97,7 +146,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675313575481</updated>
-      <workItem from="1675313578300" duration="1259000" />
+      <workItem from="1675313578300" duration="2045000" />
     </task>
     <servers />
   </component>
@@ -114,27 +163,32 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="121" y="0" key="#Project_Structure" timestamp="1675319684371">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1675320503267">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="121" y="0" key="#Project_Structure/0.0.1280.720@0.0.1280.720" timestamp="1675319684371" />
-    <state width="1236" height="176" key="GridCell.Tab.0.bottom" timestamp="1675319733974">
+    <state x="121" y="0" key="#Project_Structure/0.0.1280.720@0.0.1280.720" timestamp="1675320503267" />
+    <state width="1236" height="258" key="GridCell.Tab.0.bottom" timestamp="1675321241778">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="176" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1675319733974" />
-    <state width="1236" height="176" key="GridCell.Tab.0.center" timestamp="1675319733974">
+    <state width="1236" height="258" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1675321241778" />
+    <state width="1236" height="258" key="GridCell.Tab.0.center" timestamp="1675321241777">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="176" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1675319733974" />
-    <state width="1236" height="176" key="GridCell.Tab.0.left" timestamp="1675319733974">
+    <state width="1236" height="258" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1675321241777" />
+    <state width="1236" height="258" key="GridCell.Tab.0.left" timestamp="1675321241777">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="176" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1675319733974" />
-    <state width="1236" height="176" key="GridCell.Tab.0.right" timestamp="1675319733974">
+    <state width="1236" height="258" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1675321241777" />
+    <state width="1236" height="258" key="GridCell.Tab.0.right" timestamp="1675321241777">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="176" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1675319733974" />
+    <state width="1236" height="258" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1675321241777" />
+    <state x="412" y="171" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1675320716330">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="412" y="171" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.720@0.0.1280.720" timestamp="1675320716330" />
   </component>
 </project>
