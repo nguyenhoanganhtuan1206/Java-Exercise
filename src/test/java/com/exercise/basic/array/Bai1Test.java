@@ -1,6 +1,5 @@
 package com.exercise.basic.array;
 
-import com.exercise.basic.array.Bai1;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
