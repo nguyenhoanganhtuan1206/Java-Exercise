@@ -13,7 +13,7 @@ public class Bai3 {
 
         final StringBuilder resultStr = new StringBuilder();
 
-        int numberTemp = Math.abs(number);
+        int numberTemp = number;
 
         for (int i = 2; i <= numberTemp; i++) {
             while (numberTemp % i == 0) {
