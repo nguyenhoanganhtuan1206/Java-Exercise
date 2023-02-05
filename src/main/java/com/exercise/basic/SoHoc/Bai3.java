@@ -1,4 +1,4 @@
-package com.exercise.basic;
+package com.exercise.basic.SoHoc;
 
 public class Bai3 {
 
@@ -7,21 +7,24 @@ public class Bai3 {
             return "-" + handleAnalysisNumber(-number);
         }
 
-        final StringBuilder resultStr = new StringBuilder();
-
-        if (number == -2 || number == -1 || number == 0) {
+        if (number < 2) {
             return String.valueOf(number);
         }
+
+        final StringBuilder resultStr = new StringBuilder();
 
         int numberTemp = Math.abs(number);
 
         for (int i = 2; i <= numberTemp; i++) {
             while (numberTemp % i == 0) {
                 numberTemp /= i;
-                resultStr.append(i + " * ");
+                resultStr.append(i);
+                if (numberTemp != 1) {
+                    resultStr.append(" * ");
+                }
             }
         }
 
-        return resultStr.toString().substring(0, resultStr.length() - 2).trim();
+        return resultStr.toString();
     }
 }
