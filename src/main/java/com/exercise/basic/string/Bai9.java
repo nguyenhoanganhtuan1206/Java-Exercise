@@ -1,4 +1,4 @@
-package com.exercise.basic;
+package com.exercise.basic.string;
 
 public class Bai9 {
 
