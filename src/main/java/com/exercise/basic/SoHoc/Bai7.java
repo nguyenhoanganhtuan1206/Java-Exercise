@@ -8,7 +8,7 @@ public class Bai7 {
         for (int j = 2; j <= 5; j++) {
             int sum = 0;
             for (int i = 0; i < numberStr.length(); i++) {
-                int numberTemp = Integer.parseInt(String.valueOf(numberStr.charAt(i)));
+                int numberTemp = Integer.parseInt(numberStr.charAt(i) + "");
                 sum += Math.pow(numberTemp, j);
             }
             if (sum == n) {
