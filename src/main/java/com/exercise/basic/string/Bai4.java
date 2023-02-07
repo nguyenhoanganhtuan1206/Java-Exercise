@@ -1,20 +1,22 @@
 package com.exercise.basic.string;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Bai4 {
 
     public boolean checkDuplicate(final String str) {
-        final Set<Character> set = new HashSet<>();
+        int lenStr = str.length();
+        for (int i = lenStr / 2; i >= 1; i--) {
+            String subStr = str.substring(0, i);
+            StringBuilder repeatStr = new StringBuilder();
 
-        for (int i = 0; i < str.length(); i++) {
-            set.add(str.charAt(i));
+            for (int j = 0; j < lenStr / i; j++) {
+                repeatStr.append(subStr);
+            }
+
+            if (str.equals(repeatStr.toString())) {
+                return true;
+            }
         }
 
-        if (set.size() != str.length()) {
-            return true;
-        }
         return false;
     }
 }
