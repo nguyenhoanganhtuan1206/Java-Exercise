@@ -10,9 +10,9 @@ class Bai7Test {
     void isCheck() {
         final var bai7 = new Bai7();
 
-        assertTrue(bai7.isCheck(153));
+        assertTrue(bai7.checkSum(153));
 
-        assertFalse(bai7.isCheck(23));
-        assertFalse(bai7.isCheck(154));
+        assertFalse(bai7.checkSum(23));
+        assertFalse(bai7.checkSum(154));
     }
 }

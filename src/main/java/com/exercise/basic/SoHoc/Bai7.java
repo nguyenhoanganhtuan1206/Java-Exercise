@@ -2,7 +2,7 @@ package com.exercise.basic.SoHoc;
 
 public class Bai7 {
 
-    public boolean isCheck(int n) {
+    public boolean checkSum(int n) {
         final String numberStr = String.valueOf(n);
 
         for (int j = 2; j <= 5; j++) {
