@@ -1,8 +1,8 @@
-package com.exercise.basic.SoHoc;
+package com.exercise.basic.array;
 
 public class Bai2 {
 
-    public int sumArr(final int arr[]) {
+    public int sumArr(final int[] arr) {
         int sumEven = 0;
         int sumOdd = 0;
 
