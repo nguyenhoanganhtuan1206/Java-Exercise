@@ -18,8 +18,8 @@ public class Bai6 {
     }
 
     public int generatorLastNumBarcode(final String str) {
-        for (int i = 0; i < 10; i++) {
-            if (isBarcode(str.concat(i + ""))) {
+        for (int i = '0'; i <= '9'; i++) {
+            if (isBarcode(str + i)) {
                 return i;
             }
         }
