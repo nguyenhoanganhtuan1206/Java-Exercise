@@ -13,6 +13,7 @@ class Bai3Test {
         assertEquals(380, bai3.sumDigits("abc 123 def 33 mn 3.221"));
         assertEquals(156, bai3.sumDigits("abc 123 def 33"));
         assertEquals(0, bai3.sumDigits("abcdef"));
+        assertEquals(0, bai3.sumDigits(" "));
 
         assertEquals(123, bai3.sumDigits("123"));
         assertEquals(123, bai3.sumDigits("123nnnnnnnnnnnnn"));
