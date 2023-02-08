@@ -2,14 +2,22 @@ package com.exercise.basic.SoHoc;
 
 public class Bai7 {
 
-    public int getSum(final int n, final int pow) {
-        final String numberStr = String.valueOf(n);
+    public int getSum(final int number, final int pow) {
+        int numberTemp = number;
         int sum = 0;
 
-        for (int i = 0; i < numberStr.length(); i++) {
-            int numberTemp = Integer.parseInt(numberStr.charAt(i) + "");
-            sum += Math.pow(numberTemp, pow);
+        while (numberTemp != 0) {
+            int digit = numberTemp % 10;
+            int poweredDigit = 1;
+
+            // pow = 5 -> i->5
+            for (int i = 0; i < pow; i++) {
+                poweredDigit *= digit;
+            }
+            sum += poweredDigit;
+            numberTemp /= 10;
         }
+
 
         return sum;
     }
