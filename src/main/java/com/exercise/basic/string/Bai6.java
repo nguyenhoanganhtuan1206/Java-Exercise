@@ -20,7 +20,7 @@ public class Bai6 {
     public int generatorLastNumBarcode(final String str) {
         for (int i = '0'; i <= '9'; i++) {
             if (isBarcode(str + i)) {
-                return Integer.parseInt(i + "");
+                return i - '0';
             }
         }
 
