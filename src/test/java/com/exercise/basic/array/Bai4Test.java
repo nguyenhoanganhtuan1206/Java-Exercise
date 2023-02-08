@@ -12,7 +12,8 @@ class Bai4Test {
     private static Stream<Arguments> testData() {
         return Stream.of(
                 Arguments.arguments(new int[]{3, 2, 1, 2, 3, 4, 5}, new int[]{1, 2, 3, 4, 5}),
-                Arguments.arguments(new int[]{1, 2, 3, 4, 5, 3, 2}, new int[]{1, 2, 3, 4, 5}));
+                Arguments.arguments(new int[]{1, 2, 3, 4, 5, 3, 2}, new int[]{1, 2, 3, 4, 5}),
+                Arguments.arguments(new int[]{7, 1, 2, 3, 4, 5, 2, 6}, new int[]{1, 2, 3, 4, 5}));
     }
 
     @ParameterizedTest
