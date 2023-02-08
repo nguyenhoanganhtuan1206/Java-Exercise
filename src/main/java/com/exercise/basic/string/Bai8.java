@@ -16,15 +16,11 @@ public class Bai8 {
                 return false;
             }
 
-            if(countLen < 0) {
+            if (countLen < 0) {
                 return false;
             }
         }
 
-        if (countLen == 0) {
-            return true;
-        }
-
-        return false;
+        return countLen == 0;
     }
 }
