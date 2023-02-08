@@ -9,9 +9,8 @@ public class Bai9 {
 
         double start = 0;
         double end = number;
-        double mid;
         while (end - start > 0.001) {
-            mid = (start + end) / 2;
+            final double mid = (start + end) / 2;
             if (mid * mid > number) {
                 end = mid;
             } else {
