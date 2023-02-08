@@ -7,25 +7,21 @@ public class Bai7 {
             return false;
         }
 
-        final String strLarge = str1.length() > str2.length() ? str1 : str2;
-        final String strSmaller = str1.length() < str2.length() ? str1 : str2;
-        final int largeLength = str1.length() > str2.length() ? str1.length() : str2.length();
-        final int smallerLength = str1.length() < str2.length() ? str1.length() : str2.length();
-
-        for (int i = 0; i <= largeLength - smallerLength; i++) {
-            int j;
-            // j used to check length with str2Len
-            for (j = 0; j < smallerLength; j++) {
-                if (strLarge.charAt(i + j) != strSmaller.charAt(j)) {
-                    break;
-                }
-            }
-
-            if (j == smallerLength) {
+        for (int i = 0; i <= str1.length() - str2.length(); i++) {
+            if (isSubstring(str1, str2, i)) {
                 return true;
             }
         }
-
         return false;
+    }
+
+    private boolean isSubstring(final String str1, final String str2, final int pos) {
+        int str2Len = str2.length();
+        for (int j = 0; j < str2Len; j++) {
+            if (str1.charAt(pos + j) != str2.charAt(j)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
