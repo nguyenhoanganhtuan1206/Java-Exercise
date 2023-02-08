@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-    gradle: circleci/gradle@7.6
+    gradle: circleci/gradle@6.1
 jobs:
   build:
     docker:
