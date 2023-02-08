@@ -18,12 +18,14 @@ public class Bai6 {
     }
 
     public int generatorLastNumBarcode(final String str) {
+        int lastNumber = 0;
+
         for (int i = '0'; i <= '9'; i++) {
             if (isBarcode(str + i)) {
-                return i - '0';
+                lastNumber = i - '0';
             }
         }
 
-        return -1;
+        return lastNumber;
     }
 }
