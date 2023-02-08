@@ -10,7 +10,7 @@ public class Bai3 {
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
 
-            if (Character.isDigit(c) && c != ' ') {
+            if (Character.isDigit(c)) {
                 strResult.append(c);
             } else {
                 // Check ở có kí tự và khoảng trắng thì cộng
