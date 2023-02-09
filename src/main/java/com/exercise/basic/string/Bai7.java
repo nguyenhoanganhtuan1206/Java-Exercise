@@ -2,17 +2,17 @@ package com.exercise.basic.string;
 
 public class Bai7 {
 
-    public boolean findSubstring(final String str1, final String str2) {
+    public int findSubstring(final String str1, final String str2) {
         if (str2.trim().length() == 0 || str1.trim().length() == 0) {
-            return false;
+            return -1;
         }
 
         for (int i = 0; i <= str1.length() - str2.length(); i++) {
             if (isSubstring(str1, str2, i)) {
-                return true;
+                return i;
             }
         }
-        return false;
+        return -1;
     }
 
     private boolean isSubstring(final String str1, final String str2, final int pos) {
