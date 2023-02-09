@@ -11,7 +11,8 @@ class Bai6Test {
         final var bai6 = new Bai6();
 
         assertEquals(4, bai6.generatorLastBarcode("893850597419"));
-        assertEquals(7, bai6.generatorLastBarcode("893850597419"));
-        assertEquals(5, bai6.generatorLastBarcode("893850597411"));
+        assertEquals(8, bai6.generatorLastBarcode("123456789012"));
+        assertEquals(8, bai6.generatorLastBarcode("893850597411"));
+        assertEquals(4, bai6.generatorLastBarcode("123456789023"));
     }
 }
