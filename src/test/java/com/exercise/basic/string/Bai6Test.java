@@ -15,5 +15,6 @@ class Bai6Test {
         assertEquals(8, bai6.generatorLastBarcode("893850597411"));
         assertEquals(4, bai6.generatorLastBarcode("123456789023"));
         assertEquals(8, bai6.generatorLastBarcode("723456789023"));
+        assertEquals(0, bai6.generatorLastBarcode("523456789023"));
     }
 }
