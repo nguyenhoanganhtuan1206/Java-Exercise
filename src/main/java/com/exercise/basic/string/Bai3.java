@@ -14,17 +14,11 @@ public class Bai3 {
                 number = number * 10 + (c - '0');
             } else {
                 // Check if there are characters and spaces, then add the sum to the previous sum
-                if (number > 0) {
-                    sum += number;
-                    number = 0;
-                }
+                sum += number;
+                number = 0;
             }
         }
 
-        if (number > 0) {
-            sum += number;
-        }
-
-        return sum;
+        return sum + number;
     }
 }
