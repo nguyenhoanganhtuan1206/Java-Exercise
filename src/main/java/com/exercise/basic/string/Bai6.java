@@ -9,10 +9,17 @@ public class Bai6 {
             if (i % 2 == 0) {
                 sum += str.charAt(i) - '0';
             } else {
-                sum += 3* (str.charAt(i) - '0');
+                sum += 3 * (str.charAt(i) - '0');
             }
         }
 
-        return 10 - (sum % 10);
+        final int lastNumber = 10 - (sum % 10);
+
+        // lastNumber = 10 -> 10 % 10 = 0
+        if (lastNumber > 9) {
+            return lastNumber % 10;
+        }
+
+        return lastNumber;
     }
 }
