@@ -13,13 +13,7 @@ public class Bai6 {
             }
         }
 
-        final int lastNumber = 10 - (sum % 10);
-
         // lastNumber = 10 -> 10 % 10 = 0
-        if (lastNumber > 9) {
-            return lastNumber % 10;
-        }
-
-        return lastNumber;
+        return (10 - (sum % 10)) % 10;
     }
 }
