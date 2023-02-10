@@ -13,7 +13,6 @@ public class Bai3 {
                 // nhân 10 lên hàng chục or trăm
                 number = number * 10 + (c - '0');
             } else {
-                // Check if there are characters and spaces, then add the sum to the previous sum
                 sum += number;
                 number = 0;
             }
