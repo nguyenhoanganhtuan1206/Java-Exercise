@@ -15,8 +15,8 @@ class Bai7Test {
 
         assertEquals(-1, bai7.findSubstring("anh tuan", "asdasd"));
         assertEquals(-1, bai7.findSubstring("asdasd", "anh tuan"));
-        assertEquals(0, bai7.findSubstring("anh tuan", " "));
-        assertEquals(0, bai7.findSubstring("", "anh tuan"));
+        assertEquals(3, bai7.findSubstring("anh tuan", " "));
+        assertEquals(-1, bai7.findSubstring("", "anh tuan"));
         assertEquals(0, bai7.findSubstring("anh tuan", ""));
     }
 }

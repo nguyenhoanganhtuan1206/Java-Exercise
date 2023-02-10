@@ -3,10 +3,6 @@ package com.exercise.basic.string;
 public class Bai7 {
 
     public int findSubstring(final String str1, final String str2) {
-        if (str2.trim().length() == 0 || str1.trim().length() == 0) {
-            return 0;
-        }
-
         for (int i = 0; i <= str1.length() - str2.length(); i++) {
             if (isSubstring(str1, str2, i)) {
                 return i;
