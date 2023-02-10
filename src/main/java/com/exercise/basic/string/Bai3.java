@@ -7,7 +7,7 @@ public class Bai3 {
         int sum = 0;
 
         for (int i = 0; i < str.length(); i++) {
-            char c = str.charAt(i);
+            final char c = str.charAt(i);
 
             if (Character.isDigit(c)) {
                 // nhân 10 lên hàng chục or trăm
