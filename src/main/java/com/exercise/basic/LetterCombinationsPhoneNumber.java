@@ -4,10 +4,14 @@ import java.util.*;
 
 public class LetterCombinationsPhoneNumber {
 
-    public List<String> handleLetterCombinations(final String str) {
+    public List<String> handleLetterCombinations(final String digits) {
+        if (digits.length() == 0) {
+            return new ArrayList<>();
+        }
+
         final Map<Character, String> lettersMap = new HashMap<>();
         final Queue<String> queue = new LinkedList<>();
-        queue.add(" ");
+        queue.add("");
 
         lettersMap.put('2', "abc");
         lettersMap.put('3', "def");
@@ -16,9 +20,9 @@ public class LetterCombinationsPhoneNumber {
         lettersMap.put('6', "mno");
         lettersMap.put('7', "pqrs");
         lettersMap.put('8', "tuv");
-        lettersMap.put('9', "wvyz");
+        lettersMap.put('9', "wxyz");
 
-        for (char ch : str.toCharArray()) {
+        for (char ch : digits.toCharArray()) {
             // abc
             String strFromMap = lettersMap.get(ch);
 
