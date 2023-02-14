@@ -2,23 +2,19 @@ package com.exercise.basic.oop.Bai3;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
 public class Student {
 
-    private String firstName;
-    private String lastName;
-    private LocalDate birthday;
-    private String className;
-    private String address;
-    private Gender gender;
-    private String email;
-    private String phone;
+    private final String firstName;
+    private final String lastName;
+    private final LocalDate birthday;
+    private final String className;
+    private final String address;
+    private final Gender gender;
+    private final String email;
+    private final String phone;
 }
