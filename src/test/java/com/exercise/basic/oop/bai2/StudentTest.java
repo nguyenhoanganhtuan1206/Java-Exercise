@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StudentTest {
 
-    StudentBuilder studentBuilder = new StudentConcreteBuilder()
+    final StudentBuilder studentBuilder = new StudentConcreteBuilder()
             .setFirstName("Nguyen Hoang")
             .setLastName("Anh Tuan")
             .setAddress("Da Nang")

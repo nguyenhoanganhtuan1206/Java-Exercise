@@ -6,17 +6,17 @@ public class Student {
 
     private String firstName;
     private String lastName;
-    private LocalDate birthDay;
+    private LocalDate birthday;
     private String className;
     private String address;
     private Gender gender;
     private String email;
     private String phone;
 
-    public Student(String firstName, String lastName, LocalDate birthDay, String className, String address, Gender gender, String email, String phone) {
+    public Student(String firstName, String lastName, LocalDate birthday, String className, String address, Gender gender, String email, String phone) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthDay = birthDay;
+        this.birthday = birthday;
         this.className = className;
         this.address = address;
         this.gender = gender;
@@ -29,7 +29,7 @@ public class Student {
         return "Student{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", birthDay=" + birthDay +
+                ", birthDay=" + birthday +
                 ", className='" + className + '\'' +
                 ", address='" + address + '\'' +
                 ", gender=" + gender +
@@ -55,11 +55,11 @@ public class Student {
     }
 
     public LocalDate getBirthDay() {
-        return birthDay;
+        return birthday;
     }
 
-    public void setBirthDay(LocalDate birthDay) {
-        this.birthDay = birthDay;
+    public void setBirthDay(LocalDate birthday) {
+        this.birthday = birthday;
     }
 
     public String getClassName() {
