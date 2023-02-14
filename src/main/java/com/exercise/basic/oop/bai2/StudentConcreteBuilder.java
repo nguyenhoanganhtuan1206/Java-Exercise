@@ -14,55 +14,55 @@ public class StudentConcreteBuilder implements StudentBuilder {
     private String phone;
 
     @Override
-    public com.exercise.basic.oop.bai2.StudentBuilder setFirstName(String firstName) {
+    public StudentBuilder setFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
 
     @Override
-    public com.exercise.basic.oop.bai2.StudentBuilder setLastName(String lastName) {
+    public StudentBuilder setLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
 
     @Override
-    public com.exercise.basic.oop.bai2.StudentBuilder setGender(Gender gender) {
+    public StudentBuilder setGender(Gender gender) {
         this.gender = gender;
         return this;
     }
 
     @Override
-    public com.exercise.basic.oop.bai2.StudentBuilder setEmail(String email) {
+    public StudentBuilder setEmail(String email) {
         this.email = email;
         return this;
     }
 
     @Override
-    public com.exercise.basic.oop.bai2.StudentBuilder setBirthDay(LocalDate birthDay) {
+    public StudentBuilder setBirthDay(LocalDate birthDay) {
         this.birthDay = birthDay;
         return this;
     }
 
     @Override
-    public com.exercise.basic.oop.bai2.StudentBuilder setClassName(String className) {
+    public StudentBuilder setClassName(String className) {
         this.className = className;
         return this;
     }
 
     @Override
-    public com.exercise.basic.oop.bai2.StudentBuilder setAddress(String address) {
+    public StudentBuilder setAddress(String address) {
         this.address = address;
         return this;
     }
 
     @Override
-    public com.exercise.basic.oop.bai2.StudentBuilder setPhone(String phone) {
+    public StudentBuilder setPhone(String phone) {
         this.phone = phone;
         return this;
     }
 
     @Override
-    public com.exercise.basic.oop.bai2.Student build() {
-        return new com.exercise.basic.oop.bai2.Student(firstName, lastName, birthDay, className, address, gender, email, phone);
+    public Student build() {
+        return new Student(firstName, lastName, birthDay, className, address, gender, email, phone);
     }
 }

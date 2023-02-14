@@ -13,9 +13,6 @@ public class Student {
     private String email;
     private String phone;
 
-    public Student() {
-    }
-
     public Student(String firstName, String lastName, LocalDate birthDay, String className, String address, Gender gender, String email, String phone) {
         this.firstName = firstName;
         this.lastName = lastName;
