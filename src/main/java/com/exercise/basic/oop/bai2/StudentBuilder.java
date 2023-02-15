@@ -20,5 +20,5 @@ public interface StudentBuilder {
 
     StudentBuilder setPhone(String phone);
 
-    com.exercise.basic.oop.bai2.Student build();
+    Student build();
 }
