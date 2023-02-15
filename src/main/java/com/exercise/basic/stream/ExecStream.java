@@ -11,7 +11,7 @@ public class ExecStream {
     public VietnameseAddress getVietnameseAddress() throws IOException {
         final ObjectMapper mapper = new ObjectMapper();
 
-        final String data = Files.readString(Paths.get("src\\main\\java\\com\\exercise\\basic\\stream\\data.json"));
+        final String data = Files.readString(Paths.get("src/main/java/com/exercise/basic/stream/data.json"));
         VietnameseAddress vietnameseAddress = mapper.readValue(data, VietnameseAddress.class);
 
         return vietnameseAddress;
