@@ -53,7 +53,6 @@ public class StudentTest {
     void setFirstName() {
         studentBuilder.setFirstName("Tuan");
         assertEquals("Tuan", studentBuilder.build().getFirstName());
-
     }
 
     @Test
