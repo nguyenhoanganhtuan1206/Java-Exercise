@@ -26,16 +26,8 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", birthDay=" + birthday +
-                ", className='" + className + '\'' +
-                ", address='" + address + '\'' +
-                ", gender=" + gender +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                '}';
+        return String.format("Student{%s}, {%s}, {%s}, {%s}, {%s}, {%s}, {%s}, {%s}"
+                , firstName, lastName, birthday, className, address, gender, email, phone);
     }
 
     public String getFirstName() {

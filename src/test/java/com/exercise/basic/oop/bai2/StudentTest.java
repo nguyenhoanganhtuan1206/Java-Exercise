@@ -32,16 +32,15 @@ public class StudentTest {
 
     @Test
     void testToString() {
-        assertEquals(studentBuilder.build().toString(), "Student{" +
-                "firstName='" + studentBuilder.build().getFirstName() + '\'' +
-                ", lastName='" + studentBuilder.build().getLastName() + '\'' +
-                ", birthDay=" + studentBuilder.build().getBirthDay() +
-                ", className='" + studentBuilder.build().getClassName() + '\'' +
-                ", address='" + studentBuilder.build().getAddress() + '\'' +
-                ", gender=" + studentBuilder.build().getGender() +
-                ", email='" + studentBuilder.build().getEmail() + '\'' +
-                ", phone='" + studentBuilder.build().getPhone() + '\'' +
-                '}');
+        assertEquals(studentBuilder.build().toString(), String.format("Student{%s}, {%s}, {%s}, {%s}, {%s}, {%s}, {%s}, {%s}"
+                , studentBuilder.build().getFirstName(),
+                studentBuilder.build().getLastName(),
+                studentBuilder.build().getBirthDay(),
+                studentBuilder.build().getClassName(),
+                studentBuilder.build().getAddress(),
+                studentBuilder.build().getGender(),
+                studentBuilder.build().getEmail(),
+                studentBuilder.build().getPhone()));
     }
 
     @Test
