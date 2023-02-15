@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StudentTest {
+public class StudentBuilderTest {
 
     final StudentBuilder studentBuilder = new StudentConcreteBuilder()
             .setFirstName("Nguyen Hoang")
@@ -20,14 +20,15 @@ public class StudentTest {
 
     @Test
     void testStudent() {
-        assertEquals("Nguyen Hoang", studentBuilder.build().getFirstName());
-        assertEquals("Anh Tuan", studentBuilder.build().getLastName());
-        assertEquals("ABC", studentBuilder.build().getClassName());
-        assertEquals("nguyenhanhtuan@gmail.com", studentBuilder.build().getEmail());
-        assertEquals(LocalDate.of(2001, 06, 12), studentBuilder.build().getBirthDay());
-        assertEquals("Da Nang", studentBuilder.build().getAddress());
-        assertEquals("090xxxxx", studentBuilder.build().getPhone());
-        assertEquals(Gender.MALE, studentBuilder.build().getGender());
+        final var student = studentBuilder.build();
+        assertEquals("Nguyen Hoang", student.getFirstName());
+        assertEquals("Anh Tuan", student.getLastName());
+        assertEquals("ABC", student.getClassName());
+        assertEquals("nguyenhanhtuan@gmail.com", student.getEmail());
+        assertEquals(LocalDate.of(2001, 06, 12), student.getBirthDay());
+        assertEquals("Da Nang", student.getAddress());
+        assertEquals("090xxxxx", student.getPhone());
+        assertEquals(Gender.MALE, student.getGender());
     }
 
     @Test
