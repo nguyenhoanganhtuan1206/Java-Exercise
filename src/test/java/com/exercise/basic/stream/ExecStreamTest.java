@@ -47,11 +47,11 @@ class ExecStreamTest {
     void getVietnameseAddress() throws IOException {
         final ObjectMapper mapper = new ObjectMapper();
 
-        final String data = Files.readString(Paths.get("D:\\ThucTap\\JavaExercise\\src\\main\\java\\com\\exercise\\basic\\stream\\data.json"));
+        final String data = Files.readString(Paths.get("src/main/java/com/exercise/basic/stream/data.json"));
         VietnameseAddress vietnameseAddress = mapper.readValue(data, VietnameseAddress.class);
 
         final var execStream = new ExecStream();
 
-        assertEquals(execStream.getVietnameseAddress().toString() , vietnameseAddress.toString());
+        assertEquals(execStream.getVietnameseAddress().toString(), vietnameseAddress.toString());
     }
 }
