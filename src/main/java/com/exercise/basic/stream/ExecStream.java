@@ -27,18 +27,15 @@ public class ExecStream {
                     .findFirst()
                     .orElse(null);
 
-            if (district != null) {
-                str.append(district.getName() + ", ");
-            }
+            str.append(district.getName() + ", ");
+
 
             final Province province = provinces.stream()
                     .filter(p -> p.getIdProvince().equals(district.getIdProvince()))
                     .findFirst()
                     .orElse(null);
 
-            if (province != null) {
-                str.append(province.getName());
-            }
+            str.append(province.getName());
             result.add(str.toString());
             str.setLength(0);
         }
