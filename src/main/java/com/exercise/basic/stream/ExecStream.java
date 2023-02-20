@@ -36,7 +36,7 @@ public class ExecStream {
                     .findFirst()
                     .orElse(null);
 
-            if (district != null) {
+            if (province != null) {
                 str.append(province.getName());
             }
             result.add(str.toString());
