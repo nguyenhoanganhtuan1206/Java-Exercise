@@ -9,7 +9,7 @@ import java.util.List;
 @ToString
 public class VietnameseAddress {
 
-    private List<Communes> communes;
-    private List<Provinces> provinces;
-    private List<Districts> districts;
+    private List<Commune> communes;
+    private List<Province> provinces;
+    private List<District> districts;
 }

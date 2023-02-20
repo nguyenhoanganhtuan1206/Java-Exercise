@@ -5,8 +5,9 @@ import lombok.ToString;
 
 @Getter
 @ToString
-public class Provinces {
+public class Commune {
 
-    private String idProvince;
+    private String idCommune;
     private String name;
+    private String idDistrict;
 }
