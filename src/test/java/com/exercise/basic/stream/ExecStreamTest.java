@@ -65,9 +65,9 @@ class ExecStreamTest {
         assertTrue(execStream.findVietnameseAddressByCommuneName("Phường Phúc Xá").contains("Phường Phúc Xá, Quận Ba Đình, Thành phố Hà Nội"));
         assertTrue(execStream.findVietnameseAddressByCommuneName("Phúc")
                 .containsAll(execStream.findVietnameseAddressByCommuneName("Phúc")));
-        assertTrue(execStream.findVietnameseAddressByCommuneName("")
-                .containsAll(execStream.findVietnameseAddressByCommuneName("")));
 
+        assertFalse(execStream.findVietnameseAddressByCommuneName("123")
+                .contains(execStream.findVietnameseAddressByCommuneName("")));
         assertFalse(execStream.findVietnameseAddressByCommuneName("Phúc")
                 .contains(execStream.findVietnameseAddressByCommuneName("abc")));
         assertFalse(execStream.findVietnameseAddressByCommuneName("Phúc")
