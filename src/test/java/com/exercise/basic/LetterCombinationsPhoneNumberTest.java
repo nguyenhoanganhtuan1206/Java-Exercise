@@ -12,5 +12,6 @@ class LetterCombinationsPhoneNumberTest {
 
         assertEquals("[ad, ae, af, bd, be, bf, cd, ce, cf]", letterCombination.handleLetterCombinations("23").toString());
         assertEquals("[a, b, c]", letterCombination.handleLetterCombinations("2").toString());
+        assertEquals("[]", letterCombination.handleLetterCombinations("").toString());
     }
 }
