@@ -42,7 +42,9 @@ public class ExecStream {
     }
 
     public VietnameseAddress parseVietnameseAddress() throws IOException {
-        return ParseDataUtils.parseData(VietnameseAddress.class, "src/main/java/com/exercise/basic/stream/data.json");
+        final var parseDataUtils = new ParseDataUtils();
+
+        return parseDataUtils.parseData(VietnameseAddress.class, "src/main/java/com/exercise/basic/stream/data.json");
     }
 
     public List<Commune> findCommunesByName(final String communeName) throws IOException {
