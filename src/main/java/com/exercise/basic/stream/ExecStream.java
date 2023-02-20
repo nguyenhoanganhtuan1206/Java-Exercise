@@ -1,20 +1,18 @@
 package com.exercise.basic.stream;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.exercise.basic.utils.ParseDataUtils;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ExecStream {
 
-    public List<String> findVietnameseAddressByCommuneName(String communeName) throws IOException {
-        final List<Commune> communes = findCommuneByName(communeName);
-        final List<District> districts = findDistrictByCommunes(communes);
-        final List<Province> provinces = findProvinceByDistricts(districts);
+    public List<String> findVietnameseAddressByCommuneName(final String communeName) throws IOException {
+        final List<Commune> communes = findCommunesByName(communeName);
+        final List<District> districts = findDistrictsByCommunes(communes);
+        final List<Province> provinces = findProvincesByDistricts(districts);
 
         final StringBuilder str = new StringBuilder();
         final List<String> result = new ArrayList<>();
@@ -44,49 +42,38 @@ public class ExecStream {
     }
 
     public VietnameseAddress parseVietnameseAddress() throws IOException {
-        final ObjectMapper mapper = new ObjectMapper();
-
-        final String data = Files.readString(Paths.get("src/main/java/com/exercise/basic/stream/data.json"));
-
-        return mapper.readValue(data, VietnameseAddress.class);
+        return ParseDataUtils.parseData(VietnameseAddress.class, "src/main/java/com/exercise/basic/stream/data.json");
     }
 
-    public List<Commune> findCommuneByName(final String communeName) throws IOException {
+    public List<Commune> findCommunesByName(final String communeName) throws IOException {
         final VietnameseAddress vietnameseAddress = parseVietnameseAddress();
 
-        final List<Commune> commune = vietnameseAddress.getCommunes().stream()
+        return vietnameseAddress.getCommunes().stream()
                 .filter(c -> c.getName().contains(communeName))
                 .collect(Collectors.toList());
-
-        return commune;
     }
 
-    public List<District> findDistrictByCommunes(final List<Commune> communes) throws IOException {
+    public List<District> findDistrictsByCommunes(final List<Commune> communes) throws IOException {
         final VietnameseAddress vietnameseAddress = parseVietnameseAddress();
 
-        final List<District> districts = communes.stream()
+        return communes.stream()
                 .flatMap(c -> {
                     String districtId = c.getIdDistrict();
 
                     return vietnameseAddress.getDistricts().stream()
                             .filter(d -> d.getIdDistrict().equals(districtId));
-                })
-                .collect(Collectors.toList());
-
-        return districts;
+                }).collect(Collectors.toList());
     }
 
-    public List<Province> findProvinceByDistricts(final List<District> districts) throws IOException {
+    public List<Province> findProvincesByDistricts(final List<District> districts) throws IOException {
         final VietnameseAddress vietnameseAddress = parseVietnameseAddress();
 
-        final List<Province> provinces = districts.stream()
+        return districts.stream()
                 .flatMap(d -> {
                     String provinceId = d.getIdProvince();
 
                     return vietnameseAddress.getProvinces().stream()
                             .filter(p -> p.getIdProvince().equals(provinceId));
                 }).collect(Collectors.toList());
-
-        return provinces;
     }
 }

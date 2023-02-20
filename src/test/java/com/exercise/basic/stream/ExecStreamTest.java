@@ -1,11 +1,9 @@
 package com.exercise.basic.stream;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.exercise.basic.utils.ParseDataUtils;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,15 +11,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class ExecStreamTest {
 
     @Test
-    void findVietnameseAddressByCommuneName() {
-    }
-
-    @Test
     void testParseVietnameseAddress() throws IOException {
-        final ObjectMapper mapper = new ObjectMapper();
-
-        final String data = Files.readString(Paths.get("src/main/java/com/exercise/basic/stream/data.json"));
-        VietnameseAddress vietnameseAddress = mapper.readValue(data, VietnameseAddress.class);
+        final VietnameseAddress vietnameseAddress = ParseDataUtils.parseData(VietnameseAddress.class, "src/main/java/com/exercise/basic/stream/data.json");
 
         final var execStream = new ExecStream();
 
@@ -32,37 +23,38 @@ class ExecStreamTest {
     void testFindCommuneByName() throws IOException {
         final var execStream = new ExecStream();
 
-        final List<Commune> expected = execStream.findCommuneByName("Phúc");
+        final List<Commune> expected = execStream.findCommunesByName("Phúc");
 
-        assertEquals(expected.toString(), execStream.findCommuneByName("Phúc").toString());
+        assertEquals(expected.toString(), execStream.findCommunesByName("Phúc").toString());
     }
 
     @Test
     void findDistrictByCommunes() throws IOException {
         final var execStream = new ExecStream();
 
-        final List<Commune> communes = execStream.findCommuneByName("Phúc");
-        final List<District> districts = execStream.findDistrictByCommunes(communes);
+        final List<Commune> communes = execStream.findCommunesByName("Phúc");
+        final List<District> districts = execStream.findDistrictsByCommunes(communes);
 
-        assertEquals(districts.toString(), execStream.findDistrictByCommunes(communes).toString());
+        assertEquals(districts.toString(), execStream.findDistrictsByCommunes(communes).toString());
     }
 
     @Test
     void findProvinceByDistricts() throws IOException {
         final var execStream = new ExecStream();
 
-        final List<Commune> communes = execStream.findCommuneByName("Phúc");
-        final List<District> districts = execStream.findDistrictByCommunes(communes);
-        final List<Province> provinces = execStream.findProvinceByDistricts(districts);
+        final List<Commune> communes = execStream.findCommunesByName("Phúc");
+        final List<District> districts = execStream.findDistrictsByCommunes(communes);
+        final List<Province> provinces = execStream.findProvincesByDistricts(districts);
 
-        assertEquals(provinces.toString(), execStream.findProvinceByDistricts(districts).toString());
+        assertEquals(provinces.toString(), execStream.findProvincesByDistricts(districts).toString());
     }
 
     @Test
     void testFindVietnameseAddressByCommuneName() throws IOException {
         final var execStream = new ExecStream();
 
-        assertTrue(execStream.findVietnameseAddressByCommuneName("Phường Phúc Xá").contains("Phường Phúc Xá, Quận Ba Đình, Thành phố Hà Nội"));
+        assertTrue(execStream.findVietnameseAddressByCommuneName("Phường Phúc Xá")
+                .contains("Phường Phúc Xá, Quận Ba Đình, Thành phố Hà Nội"));
         assertTrue(execStream.findVietnameseAddressByCommuneName("Phúc")
                 .containsAll(execStream.findVietnameseAddressByCommuneName("Phúc")));
 
