@@ -5,7 +5,6 @@ import lombok.experimental.UtilityClass;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 
 @UtilityClass
 public class JsonParser {
