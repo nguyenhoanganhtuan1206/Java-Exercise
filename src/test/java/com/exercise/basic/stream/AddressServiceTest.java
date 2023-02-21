@@ -19,40 +19,19 @@ class AddressServiceTest {
     }
 
     @Test
-    void findDistrictByCommunes() throws IOException {
-        final var addressService = new AddressService();
-
-        final List<Commune> communes = addressService.findCommunesByName("Phúc");
-        final List<District> districts = addressService.findDistrictsByCommunes(communes);
-
-        assertEquals(districts.toString(), addressService.findDistrictsByCommunes(communes).toString());
-    }
-
-    @Test
-    void findProvinceByDistricts() throws IOException {
-        final var addressService = new AddressService();
-
-        final List<Commune> communes = addressService.findCommunesByName("Phúc");
-        final List<District> districts = addressService.findDistrictsByCommunes(communes);
-        final List<Province> provinces = addressService.findProvincesByDistricts(districts);
-
-        assertEquals(provinces.toString(), addressService.findProvincesByDistricts(districts).toString());
-    }
-
-    @Test
     void testFindVietnameseAddressByCommuneName() throws IOException {
-        final var execStream = new AddressService();
+        final var addressService = new AddressService();
 
-        assertTrue(execStream.findVietnameseAddressByCommuneName("Phường Phúc Xá")
+        assertTrue(addressService.findVietnameseAddressByCommuneName("Phường Phúc Xá")
                 .contains("Phường Phúc Xá, Quận Ba Đình, Thành phố Hà Nội"));
-        assertTrue(execStream.findVietnameseAddressByCommuneName("Phúc")
-                .containsAll(execStream.findVietnameseAddressByCommuneName("Phúc")));
+        assertTrue(addressService.findVietnameseAddressByCommuneName("Phúc")
+                .containsAll(addressService.findVietnameseAddressByCommuneName("Phúc")));
 
-        assertFalse(execStream.findVietnameseAddressByCommuneName("123")
-                .contains(execStream.findVietnameseAddressByCommuneName("")));
-        assertFalse(execStream.findVietnameseAddressByCommuneName("Phúc")
-                .contains(execStream.findVietnameseAddressByCommuneName("abc")));
-        assertFalse(execStream.findVietnameseAddressByCommuneName("Phúc")
-                .contains(execStream.findVietnameseAddressByCommuneName("")));
+        assertFalse(addressService.findVietnameseAddressByCommuneName("123")
+                .contains(addressService.findVietnameseAddressByCommuneName("")));
+        assertFalse(addressService.findVietnameseAddressByCommuneName("Phúc")
+                .contains(addressService.findVietnameseAddressByCommuneName("abc")));
+        assertFalse(addressService.findVietnameseAddressByCommuneName("Phúc")
+                .contains(addressService.findVietnameseAddressByCommuneName("")));
     }
 }

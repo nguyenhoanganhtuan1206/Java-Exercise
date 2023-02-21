@@ -3,15 +3,19 @@ package com.exercise.basic.utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.experimental.UtilityClass;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 @UtilityClass
 public class JsonParser {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    public static <T> T parse(final Class<T> targetClass, final String url) throws IOException {
-        return objectMapper.readValue(new File(url), targetClass);
+    public static <T> T parse(final Class<T> targetClass, final String fileName) throws IOException {
+        ClassLoader classLoader = targetClass.getClassLoader();
+        InputStream file = classLoader.getResourceAsStream(fileName);
+
+        return objectMapper.readValue(file, targetClass);
     }
 }
