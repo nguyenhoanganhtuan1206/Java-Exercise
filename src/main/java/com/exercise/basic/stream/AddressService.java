@@ -24,16 +24,9 @@ public class AddressService {
                 .forEach(c -> {
                     String districtId = c.getIdDistrict();
 
-                    District district = address.getDistricts().stream()
-                            .filter(d -> d.getIdDistrict().equals(districtId))
-                            .findFirst().orElse(null);
+                    District district = findDistrictById(districtId);
 
-                    Province province = address.getProvinces().stream()
-                            .filter(p -> {
-                                assert district != null;
-                                return p.getIdProvince().equals(district.getIdProvince());
-                            })
-                            .findFirst().orElse(null);
+                    Province province = findProvinceById(district.getIdProvince());
 
                     if (district != null && province != null) {
                         final String resultStr = String
@@ -50,5 +43,17 @@ public class AddressService {
         return address.getCommunes().stream()
                 .filter(c -> c.getName().contains(communeName))
                 .collect(Collectors.toList());
+    }
+
+    public District findDistrictById(final String districtId) {
+        return address.getDistricts().stream()
+                .filter(d -> d.getIdDistrict().equals(districtId))
+                .findFirst().orElse(null);
+    }
+
+    public Province findProvinceById(final String provinceId) {
+        return address.getProvinces().stream()
+                .filter(d -> d.getIdProvince().equals(provinceId))
+                .findFirst().orElse(null);
     }
 }
